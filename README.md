@@ -1,7 +1,7 @@
 # Azure-SOC-Honey-Net
 
 # Azure Honeynet: Simulating Real-World Cyber Attacks
-![Cloud Honeynet / SOC](https://i.imgur.com/4qcVKgw.png)
+![Cloud Honeynet / SOC](https://github.com/FUenal/Azure-SOC-Honey-Net/blob/main/1.png)
 
 ## Introduction
 
@@ -41,14 +41,14 @@ The main objective of this project was to [set up virtual machines that were int
 
 
 ## Architecture Prior to Implementing Hardening Measures and Security Controls
-![Architecture Diagram](https://github.com/FUenal/Azure-SOC-Honey-Net/blob/main/1.png)
+![Architecture Diagram](https://github.com/FUenal/Azure-SOC-Honey-Net/blob/main/2.png)
 
 <b>Before Hardening Measures and Security Controls:</b>
 
 - In the "BEFORE" stage of the project, all resources were initially deployed with public exposure to the internet. This setup was intentionally insecure to attract potential cyber attackers and observe their tactics. The Virtual Machines had both their Network Security Groups (NSGs) and built-in firewalls wide open, allowing unrestricted access from any source. Additionally, all other resources, such as storage accounts and databases, were deployed with public endpoints visible to the internet, without utilizing any Private Endpoints for added security.
 
 ## Architecture After Implementing Hardening Measures and Security Controls
-![Architecture Diagram](https://github.com/FUenal/Azure-SOC-Honey-Net/blob/main/2.png)
+![Architecture Diagram](https://github.com/FUenal/Azure-SOC-Honey-Net/blob/main/3.png)
  <b>For the "AFTER" stage, I implemented a series of hardening measures and security controls to improve the environment's overall security posture. These improvements included:</b>
 
 - <b>Network Security Groups (NSGs)</b>: I hardened the NSGs by blocking all inbound and outbound traffic, with the sole exception of my own public IP address. This ensured that only authorized traffic from a trusted source was allowed to access the virtual machines.
