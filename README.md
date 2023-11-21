@@ -107,11 +107,11 @@ Stop Time 2023-05-03 17:02:00 PM
 
 | Metric                   | Count
 | ------------------------ | -----
-| SecurityEvent (Windows VM)            | 21182
-| Syslog (Linux VM)                   | 4877
-| SecurityAlert (Microsoft Defender for Cloud            | 0
-| SecurityIncident (Sentinel Incidents)        | 343
-| NSG Inbound Malicious Flows Allowed | 969
+| SecurityEvent (Windows VM)            | 40705
+| Syslog (Linux VM)                   | 3308
+| SecurityAlert (Microsoft Defender for Cloud            | 1
+| SecurityIncident (Sentinel Incidents)        | 175
+| NSG Inbound Malicious Flows Allowed | 2212
 
 
 
