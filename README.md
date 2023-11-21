@@ -73,7 +73,7 @@ enabling the creation of visualizations that effectively illustrated the cyber t
 - <b>This attack map demonstrates the consequences of leaving the Network Security Group (NSG) open, as it allowed for malicious traffic to flow unimpeded. This visualization underscores the importance of implementing proper security measures, such as restricting NSG rules, to prevent unauthorized access and minimize potential threats.</b>
 
 
-![NSG Allowed Inbound Malicious Flows](https://github.com/FUenal/Azure-SOC-Honey-Net/blob/main/1.png)<br>
+![NSG Allowed Inbound Malicious Flows](https://github.com/FUenal/Azure-SOC-Honey-Net/blob/main/3.png)<br>
 
  <br />
  <br />
