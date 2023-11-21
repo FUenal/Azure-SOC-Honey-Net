@@ -5,11 +5,10 @@
 
 ## Introduction
 
- I am thrilled to present my latest project, which focuses on building a honeynet in Azure to simulate real-world cyber attacks. 
-This project showcases my skills in Azure security, incident response, and environment hardening
+I'm excited to introduce my most recent undertaking, centered around creating a honeynet within the Azure environment to replicate authentic cyber threats. This endeavor highlights my proficiency in Azure security, incident response, and fortifying digital environments.
 
 ## Objective
-The main objective of this project was to [set up virtual machines that were intentionally vulnerable](https://github.com/FUenal/Azure-VM-Prep/blob/main/README.md) in the Azure infrastructure to attract and analyze cyber attacks. This helped me to better understand the tactics and techniques used by attackers, while also showcasing my ability to respond quickly and effectively to any identified issues.
+The primary goal of this project involved establishing intentionally vulnerable virtual machines within the Azure infrastructure, as detailed [here](https://github.com/FUenal/Azure-VM-Prep/blob/main/README.md). The aim was to attract and analyze cyber attacks, providing valuable insights into the tactics and techniques employed by attackers. Through this initiative, I demonstrated my capability to promptly and efficiently respond to identified issues.
 
 ## Technologies, Regulations, and Azure Components Employed:
 
@@ -29,15 +28,15 @@ The main objective of this project was to [set up virtual machines that were int
 
 ## Methodology
 
-- <b>*Creating the honeynet*</b>: I began by [deploying multiple vulnerable virtual machines](https://github.com/FUenal/Azure-VM-Prep/blob/main/README.md) in Azure, simulating an insecure environment.
+- <b>*Creating the honeynet*</b>: I started with [deploying multiple vulnerable virtual machines](https://github.com/FUenal/Azure-VM-Prep/blob/main/README.md) in Azure, simulating an insecure environment.
 
-- <b>*Monitoring and analysis*</b>: Azure was configured to ingest log sources from various resources into a log analytics workspace. Microsoft Sentinel was then used to build attack maps, trigger alerts, and create incidents based on the collected data.
+- <b>*Monitoring and analysis*</b>: Azure was set up to collect log data from diverse sources into a log analytics workspace. Subsequently, Microsoft Sentinel was employed to construct attack maps, initiate alerts, and generate incidents based on the gathered data.
 
-- <b>*Security metrics measurement*</b>: I observed the environment for 24 hours, recording key security metrics while it was insecure. This provided a baseline to compare against after implementing remediation measures.
+- <b>*Security metrics measurement*</b>: I monitored the environment for a 24-hour period, documenting crucial security metrics during its vulnerable state. This established a baseline for comparison with metrics after implementing remedial measures.
 
-- <b>*Incident response and remediation*</b>: After addressing the incidents and identifying vulnerabilities, I began the process of hardening the environment by applying security best practices and Azure-specific recommendations.
+- <b>*Incident response and remediation*</b>: Following the resolution of incidents and the identification of vulnerabilities, I initiated the fortification of the environment by implementing security best practices and adhering to Azure-specific recommendations.
 
-- <b>*Post-remediation analysis*</b>: I re-observed the environment for another 24 hours to measure security metrics again, comparing the results with the initial baseline.
+- <b>*Post-remediation analysis*</b>: I conducted a second 24-hour observation of the environment to reassess security metrics, comparing the outcomes with the initial baseline.
 
 
 ## Architecture Prior to Implementing Hardening Measures and Security Controls
@@ -45,7 +44,7 @@ The main objective of this project was to [set up virtual machines that were int
 
 <b>Before Hardening Measures and Security Controls:</b>
 
-- In the "BEFORE" stage of the project, all resources were initially deployed with public exposure to the internet. This setup was intentionally insecure to attract potential cyber attackers and observe their tactics. The Virtual Machines had both their Network Security Groups (NSGs) and built-in firewalls wide open, allowing unrestricted access from any source. Additionally, all other resources, such as storage accounts and databases, were deployed with public endpoints visible to the internet, without utilizing any Private Endpoints for added security.
+- During the project's "BEFORE" phase, all resources were initially launched with public accessibility on the internet. This deliberately insecure configuration aimed to draw potential cyber attackers and monitor their strategies. The Virtual Machines had open Network Security Groups (NSGs) and permissive built-in firewalls, enabling unrestricted access from any origin. Furthermore, other resources, including storage accounts and databases, were deployed with public endpoints exposed to the internet, without incorporating Private Endpoints for enhanced security.
 
 ## Architecture After Implementing Hardening Measures and Security Controls
 ![Architecture Diagram](https://github.com/FUenal/Azure-SOC-Honey-Net/blob/main/3.png)
@@ -57,14 +56,13 @@ The main objective of this project was to [set up virtual machines that were int
 
 - <b>Private Endpoints</b>: To enhance the security of other Azure resources, I replaced the public endpoints with Private Endpoints. This ensured that access to sensitive resources, such as storage accounts and databases, was limited to the virtual network and not exposed to the public internet. As a result, these resources were protected from unauthorized access and potential attacks.
 
-By comparing the security metrics before and after implementing these hardening measures and security controls, I was able to demonstrate the effectiveness of each step in improving the overall security posture of the Azure environment.
+By contrasting the security metrics prior to and following the implementation of these fortification measures and security controls, I could illustrate how each step significantly enhanced the overall security stance of the Azure environment.
 
 ## Attack Maps Before Hardening / Security Controls
 <br />
 
 
-> <b>NOTE: The attack maps were generated by extracting data from a workbook utilizing pre-built [KQL .JSON](https://github.com/FUenal/Cloud-SOC-Project-Resources/blob/main/MS%20Sentinel%20Maps%20(JSON)/linux-ssh-auth-fail.json) map files. These files provided a structured representation of the attack patterns and their associated data, 
-enabling the creation of visualizations that effectively illustrated the cyber threats and their impact on the system.</b>
+> <b>NOTE: The attack maps were created by extracting information from a workbook that utilized predefined [KQL .JSON](https://github.com/FUenal/Cloud-SOC-Project-Resources/blob/main/MS%20Sentinel%20Maps%20(JSON)/linux-ssh-auth-fail.json) map files. These files offered a organized portrayal of the attack patterns and their corresponding data, facilitating the development of visualizations that accurately depicted the cyber threats and their consequences on the system.</b>
 
 
  <br />
@@ -102,8 +100,8 @@ enabling the creation of visualizations that effectively illustrated the cyber t
 ## Metrics Before Hardening / Security Controls
 
 The following table shows the metrics we measured in our insecure environment for 24 hours:
-Start Time 2023-05-02 17:02:00 PM
-Stop Time 2023-05-03 17:02:00 PM
+Start Time 2023-11-20 12:04:45 PM
+Stop Time 2023-11-21 12:04:45 PM
 
 | Metric                   | Count
 | ------------------------ | -----
@@ -132,7 +130,6 @@ Stop Time	2023-03-19 15:37
 
 ## Conclusion
 
-In conclusion, I set up a compact, but effective honeynet using Microsoft Azure's robust cloud infrastructure. Microsoft Sentinel was then utilized to trigger alerts and generate incidents based on the logs ingested from the implemented watch lists. Baseline metrics were recorded in the unprotected environment before the implementation of any security controls. Following this, a range of security measures were enforced to fortify the network against potential threats. Upon implementation of these controls, another set of measurements was taken.
+In summary, I established a concise yet robust honeynet using Microsoft Azure's powerful cloud infrastructure. Microsoft Sentinel was then employed to trigger alerts and generate incidents based on logs from implemented watch lists. Initial metrics were recorded in the unprotected environment before introducing any security controls. Subsequently, a variety of security measures were implemented to strengthen the network against potential threats. After the application of these controls, additional measurements were taken.
 
-The comparison of pre- and post-implementation metrics demonstrated a significant reduction in security events and incidents, which highlights the effectiveness of the enforced security controls.
-It's important to mention that if the network's resources were extensively engaged by regular users, it's plausible that a higher number of security events and alerts could have been produced within the 24-hour timeframe post-security control implementation.
+Comparing pre- and post-implementation metrics revealed a substantial decrease in security events and incidents, underscoring the effectiveness of the implemented security controls. It's noteworthy to acknowledge that if the network resources were actively used by regular users, a higher number of security events and alerts might have occurred within the 24-hour period following the implementation of security controls.
