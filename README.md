@@ -1,7 +1,7 @@
 # Azure-SOC-Honey-Net
 
 # Azure Honeynet: Simulating Real-World Cyber Attacks
-![Cloud Honeynet / SOC](https://github.com/FUenal/Azure-SOC-Honey-Net/blob/main/1.png)
+![Cloud Honeynet / SOC](https://github.com/FUenal/Azure-SOC-Honey-Net/blob/main/assets/1.png)
 
 ## Introduction
 
@@ -40,14 +40,14 @@ The primary goal of this project involved establishing intentionally vulnerable 
 
 
 ## Architecture Prior to Implementing Hardening Measures and Security Controls
-![Architecture Diagram](https://github.com/FUenal/Azure-SOC-Honey-Net/blob/main/2.png)
+![Architecture Diagram](https://github.com/FUenal/Azure-SOC-Honey-Net/blob/main/assets/2.png)
 
 <b>Before Hardening Measures and Security Controls:</b>
 
 - During the project's "BEFORE" phase, all resources were initially launched with public accessibility on the internet. This deliberately insecure configuration aimed to draw potential cyber attackers and monitor their strategies. The Virtual Machines had open Network Security Groups (NSGs) and permissive built-in firewalls, enabling unrestricted access from any origin. Furthermore, other resources, including storage accounts and databases, were deployed with public endpoints exposed to the internet, without incorporating Private Endpoints for enhanced security.
 
 ## Architecture After Implementing Hardening Measures and Security Controls
-![Architecture Diagram](https://github.com/FUenal/Azure-SOC-Honey-Net/blob/main/3.png)
+![Architecture Diagram](https://github.com/FUenal/Azure-SOC-Honey-Net/blob/main/assets/3.png)
  <b>For the "AFTER" stage, I implemented a series of hardening measures and security controls to improve the environment's overall security posture. These improvements included:</b>
 
 - <b>Network Security Groups (NSGs)</b>: I hardened the NSGs by blocking all inbound and outbound traffic, with the sole exception of my own public IP address. This ensured that only authorized traffic from a trusted source was allowed to access the virtual machines.
@@ -71,21 +71,21 @@ By contrasting the security metrics prior to and following the implementation of
 - <b>This attack map demonstrates the consequences of leaving the Network Security Group (NSG) open, as it allowed for malicious traffic to flow unimpeded. This visualization underscores the importance of implementing proper security measures, such as restricting NSG rules, to prevent unauthorized access and minimize potential threats.</b>
 
 
-![NSG Allowed Inbound Malicious Flows](https://github.com/FUenal/Azure-SOC-Honey-Net/blob/main/(before)nsg-malicious-allowed-in.png)<br>
+![NSG Allowed Inbound Malicious Flows](https://github.com/FUenal/Azure-SOC-Honey-Net/blob/main/assets/(before)nsg-malicious-allowed-in.png)<br>
 
  <br />
  <br />
  
  - <b>This attack map highlights the numerous syslog authentication failures experienced by the Linux server I deployed, indicating that unauthorized access attempts were made from outisde. This serves as a reminder of the importance of securing Linux servers with strong authentication mechanisms and monitoring system logs for signs of intrusion attempts.</b>
  
-![Linux Syslog Auth Failures](https://github.com/FUenal/Azure-SOC-Honey-Net/blob/main/(before)linux-ssh-auth-fail.png)<br>
+![Linux Syslog Auth Failures](https://github.com/FUenal/Azure-SOC-Honey-Net/blob/main/assets/(before)linux-ssh-auth-fail.png)<br>
 
  <br />
  <br />
  
  - <b>This attack map showcases numerous RDP and SMB failures, illustrating the persistent attempts by potential attackers to exploit these protocols. The visualization emphasizes the need for securing remote access and file sharing services to protect against unauthorized access and potential cyber threats.</b>
  
-![Windows RDP/SMB Auth Failures](https://github.com/FUenal/Azure-SOC-Honey-Net/blob/main/(before)windows-rdp-auth-fail.png)<br>
+![Windows RDP/SMB Auth Failures](https://github.com/FUenal/Azure-SOC-Honey-Net/blob/main/assets/(before)windows-rdp-auth-fail.png)<br>
 
  <br />
  <br />
