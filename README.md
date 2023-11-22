@@ -1,7 +1,7 @@
 # Azure-SOC-Honey-Net
 
 # Azure Honeynet: Simulating Real-World Cyber Attacks
-![Cloud Honeynet / SOC](https://github.com/FUenal/Azure-SOC-Honey-Net/blob/main/assets/1.png)
+![Cloud Honeynet / SOC](https://github.com/FUenal/Azure-SOC-Honey-Net/blob/main/assets/01.png)
 
 ## Introduction
 
