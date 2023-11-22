@@ -40,14 +40,14 @@ The primary goal of this project involved establishing intentionally vulnerable 
 
 
 ## Architecture Prior to Implementing Hardening Measures and Security Controls
-![Architecture Diagram](https://github.com/FUenal/Azure-SOC-Honey-Net/blob/main/assets/2.png)
+![Architecture Diagram](https://github.com/FUenal/Azure-SOC-Honey-Net/blob/main/assets/02.png)
 
 <b>Before Hardening Measures and Security Controls:</b>
 
 - During the project's "BEFORE" phase, all resources were initially launched with public accessibility on the internet. This deliberately insecure configuration aimed to draw potential cyber attackers and monitor their strategies. The Virtual Machines had open Network Security Groups (NSGs) and permissive built-in firewalls, enabling unrestricted access from any origin. Furthermore, other resources, including storage accounts and databases, were deployed with public endpoints exposed to the internet, without incorporating Private Endpoints for enhanced security.
 
 ## Architecture After Implementing Hardening Measures and Security Controls
-![Architecture Diagram](https://github.com/FUenal/Azure-SOC-Honey-Net/blob/main/assets/3.png)
+![Architecture Diagram](https://github.com/FUenal/Azure-SOC-Honey-Net/blob/main/assets/03.png)
  <b>For the "AFTER" stage, I implemented a series of hardening measures and security controls to improve the environment's overall security posture. These improvements included:</b>
 
 - <b>Network Security Groups (NSGs)</b>: I hardened the NSGs by blocking all inbound and outbound traffic, with the sole exception of my own public IP address. This ensured that only authorized traffic from a trusted source was allowed to access the virtual machines.
